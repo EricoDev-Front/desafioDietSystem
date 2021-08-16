@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio Diet System</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script defer src="./assets/js/main.js"></script>
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <a href="index.html"><img src="./assets/imagens/apple.png" alt="" /></a>
+      <div class="login">
+        <div class="buttons">
+          <a href="cadastro.html">Cadastre-se</a>
+          <a href="#" class="greenButton">Já tenho cadastro</a>
+        </div>
+        <div class="campo-input">
+          <input
+            type="email"
+            placeholder="admin@dietsystem.com"
+            id="email"
+            onfocus="this.style.border='2px solid #4ad395'"
+            onblur="validacaoBorder()"
+            onchange="desabilitarBotao()"
+          />
+          <button class="icon" type="submit">
+            <i class="far fa-envelope"></i>
+          </button>
+        </div>
+        <div class="campo-input">
+          <input
+            type="password"
+            placeholder="Digite sua senha"
+            id="password"
+            onfocus="this.style.border='2px solid #4ad395'"
+            onblur="validacaoBorder()"
+          />
+          <button class="icon" type="submit">
+            <i class="fas fa-lock"></i>
+          </button>
+          <button class="visor" type="submit" id="visor">
+            <i id="olho" class="fas fa-eye"></i>
+          </button>
+        </div>
+        <span><a href="nova-senha.html"> Esqueci minha senha</a></span>
+        <div class="entrar">
+          <button
+            class="greenButton"
+            type="button"
+            onclick="entrarHabilitado()"
+            id="entrar"
+          >
+            Entrar
+          </button>
+          <div class="loaderContainer">
+            <div class="loader loader--style3" title="2">
+              <svg
+                version="1.1"
+                id="loader-1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                width="40px"
+                height="20px"
+                viewBox="0 0 50 50"
+                style="enable-background: new 0 0 50 50"
+                xml:space="preserve"
+              >
+                <path
+                  fill="#000"
+                  d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z"
+                >
+                  <animateTransform
+                    attributeType="xml"
+                    attributeName="transform"
+                    type="rotate"
+                    from="0 25 25"
+                    to="360 25 25"
+                    dur="0.6s"
+                    repeatCount="indefinite"
+                  />
+                </path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

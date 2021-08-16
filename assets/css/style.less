@@ -1,0 +1,202 @@
+// Colors
+@green: #4ad395;
+// Font
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  a {
+    text-decoration: none;
+    color: black;
+    img {
+      width: 120px;
+      height: 104px;
+      margin-bottom: 30%;
+    }
+  }
+  .login {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 30%;
+    p {
+      text-align: center;
+    }
+    p.titulo {
+      font-weight: bold;
+    }
+    .tituloNovo {
+      font-weight: bold;
+      text-align: left;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      a {
+        width: 48%;
+        height: 49px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        background: #c4c4c4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+          background: @green;
+          cursor: pointer;
+          color: white;
+        }
+      }
+      .greenButton {
+        background: @green;
+        cursor: pointer;
+        color: white;
+        font-size: 16px;
+        &:hover {
+          background: #2f8a61;
+        }
+      }
+    }
+    .campo-input {
+      position: relative;
+      width: 100%;
+      margin-top: 10%;
+      input {
+        width: 90%;
+        padding-left: 40px;
+        height: 49px;
+        border-radius: 5px;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        &::placeholder {
+          color: #777777;
+        }
+        &:focus {
+          box-shadow: 0 0 0 0;
+          outline: 0;
+        }
+      }
+      .icon {
+        position: absolute;
+        top: 13px;
+        left: 7px;
+        z-index: 10;
+        border: none;
+        background: transparent;
+        font-size: 20px;
+        color: rgba(0, 0, 0, 0.3);
+      }
+      .visor {
+        position: absolute;
+        top: 15px;
+        right: 0;
+        z-index: 1;
+        border: none;
+        background: transparent;
+        font-size: 20px;
+        padding-right: 10px;
+        cursor: pointer;
+        color: @green;
+      }
+    }
+    .colunas {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      margin-top: 5%;
+      .buttons {
+        width: 45%;
+        a {
+          width: 100%;
+        }
+      }
+      .entrar {
+        width: 50%;
+        .greenButton {
+          width: 100%;
+          margin-top: 0px;
+        }
+        .loaderContainer {
+          width: 100%;
+        }
+      }
+    }
+    span {
+      text-align: end;
+      margin-top: 3%;
+      a {
+        color: @green;
+        text-decoration: none;
+        &:hover {
+          color: #2f8a61;
+        }
+      }
+    }
+    .entrar {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      .greenButton {
+        background: @green;
+        width: 50%;
+        height: 49px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        margin-top: 5%;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+          background: #2f8a61;
+        }
+      }
+      .loaderContainer {
+        background: @green;
+        height: 49px;
+        width: 50%;
+        margin-top: 5%;
+        display: flex;
+        justify-content: center;
+        border-radius: 5px;
+        .loader {
+          margin: 0 0 2em;
+          height: 100px;
+          width: 20%;
+          text-align: center;
+          padding: 1em;
+          margin: 0 auto 1em;
+          display: inline-block;
+          vertical-align: top;
+        }
+        svg path,
+        svg rect {
+          fill: white;
+        }
+      }
+    }
+    .direitos {
+      display: flex;
+      input {
+        cursor: pointer;
+      }
+      p {
+        font-size: 10px;
+        span {
+          color: @green;
+        }
+      }
+    }
+  }
+}

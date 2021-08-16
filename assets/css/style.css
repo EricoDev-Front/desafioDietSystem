@@ -1,0 +1,210 @@
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v18/JTUSjIg1_i6t8kCHKm45xW4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_bZF7g4.ttf) format('truetype');
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+.container a {
+  text-decoration: none;
+  color: black;
+}
+.container a img {
+  width: 120px;
+  height: 104px;
+  margin-bottom: 30%;
+}
+.container .login {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 30%;
+}
+.container .login p {
+  text-align: center;
+}
+.container .login p.titulo {
+  font-weight: bold;
+}
+.container .login .tituloNovo {
+  font-weight: bold;
+  text-align: left;
+}
+.container .login .buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.container .login .buttons a {
+  width: 48%;
+  height: 49px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  background: #c4c4c4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .login .buttons a:hover {
+  background: #4ad395;
+  cursor: pointer;
+  color: white;
+}
+.container .login .buttons .greenButton {
+  background: #4ad395;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+}
+.container .login .buttons .greenButton:hover {
+  background: #2f8a61;
+}
+.container .login .campo-input {
+  position: relative;
+  width: 100%;
+  margin-top: 10%;
+}
+.container .login .campo-input input {
+  width: 90%;
+  padding-left: 40px;
+  height: 49px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.container .login .campo-input input::placeholder {
+  color: #777777;
+}
+.container .login .campo-input input:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+.container .login .campo-input .icon {
+  position: absolute;
+  top: 13px;
+  left: 7px;
+  z-index: 10;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.3);
+}
+.container .login .campo-input .visor {
+  position: absolute;
+  top: 15px;
+  right: 0;
+  z-index: 1;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  padding-right: 10px;
+  cursor: pointer;
+  color: #4ad395;
+}
+.container .login .colunas {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 5%;
+}
+.container .login .colunas .buttons {
+  width: 45%;
+}
+.container .login .colunas .buttons a {
+  width: 100%;
+}
+.container .login .colunas .entrar {
+  width: 50%;
+}
+.container .login .colunas .entrar .greenButton {
+  width: 100%;
+  margin-top: 0px;
+}
+.container .login .colunas .entrar .loaderContainer {
+  width: 100%;
+}
+.container .login span {
+  text-align: end;
+  margin-top: 3%;
+}
+.container .login span a {
+  color: #4ad395;
+  text-decoration: none;
+}
+.container .login span a:hover {
+  color: #2f8a61;
+}
+.container .login .entrar {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+.container .login .entrar .greenButton {
+  background: #4ad395;
+  width: 50%;
+  height: 49px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 5%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .login .entrar .greenButton:hover {
+  background: #2f8a61;
+}
+.container .login .entrar .loaderContainer {
+  background: #4ad395;
+  height: 49px;
+  width: 50%;
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+}
+.container .login .entrar .loaderContainer .loader {
+  margin: 0 0 2em;
+  height: 100px;
+  width: 20%;
+  text-align: center;
+  padding: 1em;
+  margin: 0 auto 1em;
+  display: inline-block;
+  vertical-align: top;
+}
+.container .login .entrar .loaderContainer svg path,
+.container .login .entrar .loaderContainer svg rect {
+  fill: white;
+}
+.container .login .direitos {
+  display: flex;
+}
+.container .login .direitos input {
+  cursor: pointer;
+}
+.container .login .direitos p {
+  font-size: 10px;
+}
+.container .login .direitos p span {
+  color: #4ad395;
+}
