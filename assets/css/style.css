@@ -82,6 +82,12 @@ body {
   width: 100%;
   margin-top: 10%;
 }
+.container .login .campo-input .senhaErrada {
+  font-size: 12px;
+  color: #ec1839;
+  font-weight: bold;
+  display: none;
+}
 .container .login .campo-input input {
   width: 90%;
   padding-left: 40px;

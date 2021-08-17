@@ -7,7 +7,8 @@
     <title>Desafio Diet System</title>
 
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <script defer src="./assets/js/main.js"></script>
+    <link rel="stylesheet" href="./assets/css/mobile.css">
+    <script defer src="./assets/js/cadastro.js"></script>
     <script
       defer
       src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
@@ -22,50 +23,95 @@
           <a href="index.html">Já tenho cadastro</a>
         </div>
         <div class="campo-input">
-          <input type="text" placeholder="Seu nome" />
+          <input
+            type="text"
+            placeholder="Seu nome"
+            id="nome"
+            oninput="validaFormButton()"
+            onblur="validacaoBorderinputNome()"
+            onfocus="this.style.border='2px solid #4ad395'"
+          />
           <button class="icon" type="submit">
             <i class="far fa-user"></i>
           </button>
         </div>
         <div class="campo-input">
-          <input type="text" placeholder="Seu número de celular" />
+          <input
+            type="text"
+            placeholder="Seu número de celular"
+            id="celular"
+            oninput="validaFormButton()"
+            onfocus="this.style.border='2px solid #4ad395'"
+            onblur="validacaoBorderinputCelular()"
+          />
           <button class="icon" type="submit">
             <i class="fas fa-mobile-alt"></i>
           </button>
         </div>
         <div class="campo-input">
-          <input type="email" placeholder="Seu e-mail" />
+          <input
+            type="email"
+            placeholder="Seu e-mail"
+            id="email"
+            oninput="validaFormButton()"
+            onfocus="this.style.border='2px solid #4ad395'"
+            onblur="validacaoBorderinputEmail()"
+          />
           <button class="icon" type="submit">
             <i class="far fa-envelope"></i>
           </button>
         </div>
         <div class="campo-input">
-          <input type="password" placeholder="Digite uma senha forte" id="password" onfocus="this.style.border='2px solid #4ad395'"
-          onblur="this.style.border='2px solid red'"/>
-          <button class="icon" type="submit">
-            <i class="fas fa-lock"></i>
-          </button>
-          <button class="visor" type="submit" id="visor">
-            <i id="olho" class="fas fa-eye"></i>
-          </button>
-        </div>
-        <div class="campo-input">
-          <input type="password" placeholder="Digite a senha novamente" id="passwordDois" onfocus="this.style.border='2px solid #4ad395'"
-          onblur="this.style.border='2px solid red'"/>
+          <input
+            onfocus="this.style.border='2px solid #4ad395'"
+            onblur="validacaoBorderinputSenha()"
+            type="password"
+            placeholder="Digite sua senha"
+            id="inputSenha"
+            oninput="validaFormButton()"
+          />
           <button class="icon" type="submit">
             <i class="fas fa-lock"></i>
           </button>
           <button class="visor" type="submit" id="visorDois">
-            <i id="olhoDois" class="fas fa-eye"></i>
+            <i id="olhoDois" onclick="clickDois()" class="fas fa-eye"></i>
           </button>
         </div>
+        <div class="campo-input">
+          <input
+            onfocus="this.style.border='2px solid #4ad395'"
+            onblur="validacaoBorderinputNovasenha()"
+            type="password"
+            placeholder="Digite uma senha forte"
+            id="inputNovasenha"
+            oninput="validaFormButton()"
+          />
+          <button class="icon" type="submit">
+            <i class="fas fa-lock"></i>
+          </button>
+          <button class="visor" type="submit" id="visorTres">
+            <i id="olhoTres" onclick="clickTres()" class="fas fa-eye"></i>
+          </button>
+          <p class="senhaErrada" id="senhaErrada">Senhas não coincidem!</p>
+        </div>
         <div class="direitos">
-          <input type="checkbox" id="checkbox">
-          <p>Declaro que li e concordo com os <span>termos de uso</span> , e a <span>política deprivacidade</span>.</p>
-        </div> 
-        
+          <input type="checkbox" id="checkbox" oninput="validaFormButton()" />
+          <p>
+            Declaro que li e concordo com os <span>termos de uso</span> e a
+            <span>política de privacidade</span>.
+          </p>
+        </div>
+
         <div class="entrar">
-          <a href="#" class="greenButton" id="finalizar">Finalizar cadastro</a>
+          <button
+            class="greenButton"
+            id="finalizar"
+            type="button"
+            disabled
+            onclick="finalizarHabilitado()"
+          >
+            Finalizar cadastro
+          </button>
           <div class="loaderContainer">
             <div class="loader loader--style3" title="2">
               <svg

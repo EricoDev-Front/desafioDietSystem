@@ -7,7 +7,8 @@
     <title>Desafio Diet System</title>
 
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <script defer src="./assets/js/main.js"></script>
+    <link rel="stylesheet" href="./assets/css/mobile.css">
+    <script defer src="./assets/js/login.js"></script>
     <script
       defer
       src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
@@ -23,12 +24,12 @@
         </div>
         <div class="campo-input">
           <input
+            onfocus="this.style.border='2px solid #4ad395'"
+            onblur="validacaoBorderEmail()"
+            oninput="valida()"
             type="email"
             placeholder="admin@dietsystem.com"
             id="email"
-            onfocus="this.style.border='2px solid #4ad395'"
-            onblur="validacaoBorder()"
-            onchange="desabilitarBotao()"
           />
           <button class="icon" type="submit">
             <i class="far fa-envelope"></i>
@@ -36,11 +37,12 @@
         </div>
         <div class="campo-input">
           <input
+            onfocus="this.style.border='2px solid #4ad395'"
+            onblur="validacaoBorderPassword()"
+            oninput="valida()"
             type="password"
             placeholder="Digite sua senha"
             id="password"
-            onfocus="this.style.border='2px solid #4ad395'"
-            onblur="validacaoBorder()"
           />
           <button class="icon" type="submit">
             <i class="fas fa-lock"></i>
